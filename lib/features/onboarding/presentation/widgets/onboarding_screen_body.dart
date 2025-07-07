@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:train_zagazig_app/core/services/shared_prefrences_singleton.dart';
 import 'package:train_zagazig_app/core/widgets/custom_button.dart';
-import 'package:train_zagazig_app/features/auth/widgets/welcome_screen.dart';
+import 'package:train_zagazig_app/features/chat/presentation/screen/chat_screen.dart';
 import 'package:train_zagazig_app/features/onboarding/presentation/widgets/on_boarding_page_view.dart';
 
 class OnboardingScreenBody extends StatefulWidget {
@@ -55,7 +55,7 @@ class _OnboardingScreenBodyState extends State<OnboardingScreenBody> {
                 onPressed: () {
                   SharedPreferencesSingleton.setBool("isOnBoardingViewScreen", true);
                   Navigator.pushReplacement(context,
-                   MaterialPageRoute(builder: (context) => WelcomeScreen()));
+                   MaterialPageRoute(builder: (context) => ChatScreen()));
                 },
                 text: 'Skip',
                 backgroundColor: Colors.white,
@@ -69,7 +69,7 @@ class _OnboardingScreenBodyState extends State<OnboardingScreenBody> {
                   if (currentPage == 2) {
                      SharedPreferencesSingleton.setBool("isOnBoardingViewScreen", true);
                     Navigator.pushReplacement(context,
-                   MaterialPageRoute(builder: (context) => WelcomeScreen()));
+                   MaterialPageRoute(builder: (context) => ChatScreen()));
                   } else {
                     pageController.nextPage (
                     duration: Duration(milliseconds: 20), 

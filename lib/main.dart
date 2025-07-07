@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:train_zagazig_app/core/constants/routes.dart';
 import 'package:train_zagazig_app/core/services/shared_prefrences_singleton.dart';
-import 'package:train_zagazig_app/features/auth/widgets/welcome_screen.dart';
-import 'package:train_zagazig_app/features/home/home_screen.dart';
+import 'package:train_zagazig_app/features/chat/presentation/screen/chat_screen.dart';
 import 'package:train_zagazig_app/features/onboarding/presentation/screens/onboarding_screen.dart';
 
 void main() async {
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
           onGenerateRoute: onGenerateRoute,
           initialRoute:
               SharedPreferencesSingleton.getBool("isOnBoardingViewScreen")
-              ? WelcomeScreen.routeName
+              ? ChatScreen.routeName
               : OnboardingScreen.routeName,
         );
       },

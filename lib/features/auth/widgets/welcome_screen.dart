@@ -4,7 +4,7 @@ import 'package:train_zagazig_app/core/widgets/custom_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
-    static const String routeName = 'Welcome Screen';
+  static const String routeName = 'Welcome Screen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +23,7 @@ class WelcomeScreen extends StatelessWidget {
               height: 0.80,
             ),
           ),
-          SizedBox(height: 16),
+          SizedBox(height: 16.h),
           Text(
             'Lorem ipsum dolor sit amet consectetur. ',
             textAlign: TextAlign.center,
@@ -35,10 +35,32 @@ class WelcomeScreen extends StatelessWidget {
               height: 1.33,
             ),
           ),
-          SizedBox(height: 188,),
-          CustomButton(onPressed: () {  }, text: 'Create an account', backgroundColor: Color(0xff075E54), height: 48.h, width: 364.w, colorText: Colors.white,),
-          SizedBox(height: 16,),
-          CustomButton(onPressed: () {  }, text: 'Log In', backgroundColor:Colors.white, height: 48.h, width: 364.w, colorText: Color(0xff075E54))
+          SizedBox(height: 200.h),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            child: CustomButton(
+              onPressed: () {
+                Navigator.pushNamed(context, 'signUp');
+              },
+              text: 'Create an account',
+              backgroundColor: Color(0xff075E54),
+              height: 48.h,
+              width: 364.w,
+              colorText: Colors.white,
+            ),
+          ),
+          SizedBox(height: 16),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            child: CustomButton(
+              onPressed: () {},
+              text: 'Log In',
+              backgroundColor: Colors.white,
+              height: 48.h,
+              width: 364.w,
+              colorText: Color(0xff075E54),
+            ),
+          ),
         ],
       ),
     );

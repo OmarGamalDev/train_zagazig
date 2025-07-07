@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomInputField extends StatelessWidget {
   final String hintText;
-  final IconData icon;
   final bool obscureText;
   final String? Function(String?)? validator;
   final TextInputType? keyboardType;
@@ -11,7 +10,6 @@ class CustomInputField extends StatelessWidget {
   const CustomInputField({
     Key? key,
     required this.hintText,
-    required this.icon,
     this.obscureText = false,
     this.validator,
     this.keyboardType,
@@ -27,7 +25,6 @@ class CustomInputField extends StatelessWidget {
         validator: validator,
         keyboardType: keyboardType,
         decoration: InputDecoration(
-          prefixIcon: Icon(icon),
           hintText: hintText,
           filled: true,
           fillColor: Colors.white,
